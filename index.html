@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="تطبيق تعليمي للأطفال لتعلم الأحاديث والسور بسهولة.">
+  <meta name="keywords" content="تعليم, أطفال, أحاديث, سور, تطبيق">
+  <meta name="author" content="مصطفى">
+  <title>تطبيق تعليمي للأطفال</title>
+
+  <!-- أيقونات خطية -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(to bottom, #0a80e9, #14168d);
+      color: #fff;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    header {
+      background-color: #14168d;
+      padding: 20px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    header img {
+      max-width: 150px;
+      border-radius: 50%;
+      animation: flip 3s linear infinite;
+    }
+
+    @keyframes flip {
+      0% {
+        transform: rotateY(0deg);
+      }
+      50% {
+        transform: rotateY(180deg);
+      }
+      100% {
+        transform: rotateY(360deg);
+      }
+    }
+
+    header h1 {
+      font-size: 1.8rem;
+      margin: 10px 0 0;
+      color: #ffdc00;
+    }
+
+    .hadith-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+      padding: 20px 0;
+    }
+
+    .hadith-list button {
+      background-size: cover;
+      background-position: center;
+      width: 100%;
+      max-width: 150px;
+      height: 90px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .hadith-list button:hover {
+      transform: translateY(-5px) scale(1.05);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+    }
+
+    .hadith-list button:nth-child(1) {
+      background-image: url('https://dl.dropboxusercontent.com/scl/fi/s3fjqzxtzgqqxkui7u4zn/1.jpg?rlkey=8d07ylo97p5kgzivlo0zpexn9&st=ytp09ons&');
+    }
+
+    .hadith-list button:nth-child(2) {
+      background-image: url('https://dl.dropboxusercontent.com/scl/fi/3ryu42pgr6mvgetn6toz9/1.jpg?rlkey=jf7ys3x5tkknyna58olnqd02n&st=mtmt7zzq&');
+    }
+
+    .hadith-list button:nth-child(3) {
+      background-image: url('https://dl.dropboxusercontent.com/scl/fi/zfx3iefnq2j7kqza0oiah/1.jpg?rlkey=vtb3y9uro8d5637b6wheqeys4&st=0qrpaeqq&');
+    }
+
+    .hadith-list button:nth-child(4) {
+      background-image: url('https://dl.dropboxusercontent.com/scl/fi/rc71bpjnpico78snz2ob8/1.jpg?rlkey=7eqeoxlc5ntjrqvo5jrvz8sn1&st=2jz3yn2x&');
+    }
+
+    footer {
+      background-color: #9c1440;
+      padding: 15px;
+      text-align: center;
+      color: #fff;
+      font-size: 0.9rem;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <img src="https://dl.dropboxusercontent.com/scl/fi/xknw3eojh3v1vu14q4ov8/20241219_113214.png?rlkey=j53gbtwwm6hr2bt2nlvc5a5ll&st=31dkflbg&" alt="صورة تطبيق">
+      <h1> تعليم طفل إلياس</h1>
+    </header>
+
+    <main>
+      <div class="hadith-list">
+        <button onclick="openPage('sura.html')" aria-label="سورة"></button>
+        <button onclick="openPage('hadith.html')" aria-label="حديث"></button>
+        <button onclick="openPage('adia.html')" aria-label="دعاء"></button>
+        <button onclick="openPage('hltalam.html')" aria-label="صفحة 4"></button>
+      </div>
+    </main>
+
+    <footer>
+      <p>جميع الحقوق محفوظة © 2024 </p>
+    </footer>
+  </div>
+
+  <script>
+    // فتح صفحة جديدة عند الضغط على الزر
+    function openPage(pageUrl) {
+      window.location.href = pageUrl;
+    }
+  </script>
+</body>
+</html>
